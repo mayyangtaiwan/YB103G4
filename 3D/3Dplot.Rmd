@@ -13,7 +13,7 @@ Qoo = read.csv("forplot.csv", sep = ",")
 
 SeaFood!
 
-```{r, echo=FALSE}
+```{r}
 SeaFood= Qoo %>% filter(IngreSubCatNo == 'F')
 par(family='Hannotate TC')
 par(mar=c(0.5,0,0,0))
@@ -26,7 +26,7 @@ text3D(x =SeaFood$V2 , y = SeaFood$IngreCal, z =SeaFood$IngreSeason,
 
 Veg!
 
-```{r, echo=FALSE}
+```{r}
 Veg= Qoo %>% filter(IngreSubCatNo == 'G')
 par(family='Hannotate TC')
 par(mar=c(0.5,0,0,0))
