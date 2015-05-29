@@ -1,0 +1,140 @@
+---
+title: "Apriori"
+output: html_document
+---
+1. Large clusters of co-occuring items should probably be placed in their own category / theme
+2. Item pairs that commonly co-occur should be placed close together within broader categories on the website. This is especially important where one item in a pair is very popular, and the other item is very high margin.
+3. Long lists of rules (including ones with low support and confidence) can be used to put recommendations at the bottom of product pages and on product cart pages. The only thing that matters for these rules is that the lift is greater than one. (And that we pick those rules that are applicable for each product with the high lift where the product recommended has a high margin.)
+In the event that doing the above (3) drives significant uplift in profit, it would strengthen the case to invest in a recommendation system, that uses a similar algorithm in an operational context to power automatic recommendation engine on your website. 
+
+```{r, warning=FALSE ,message=FALSE}
+library(arules)
+library(arulesViz)
+library(dplyr)
+library(colorspace)
+library(RColorBrewer)
+```
+
+```{r}
+#All1= read.csv('Ingres_All.csv', header =F, strip.white=TRUE, sep=',')
+#All2 = read.csv("tagsAll-Name.csv",header =F, strip.white=TRUE, sep=',')
+#轉型join
+#All1[,2] = as.character(All1[,2])
+#All2[,2] = as.character(All2[,2])
+#All= inner_join(All1, All2, by = c('V2'='V2'))
+#配對回主類別
+#All[,3] = sub("([[:alpha:]]{1}[[:digit:]]+)", "", All[,3])
+#filter調味料和其他
+#ALL = All %>% filter(V1.y!="K")%>% filter(V1.y!="L")
+#write.table(ALL,'ALL_forApriori.txt', sep=',', quote=F, row.names=F, col.names=F)
+ALL = read.csv("ALL_forApriori.txt",header =F, strip.white=TRUE, sep=',')
+#生成lists
+bll = tapply(ALL[,2], ALL[,1], paste)
+#filter null lists
+Bll = Filter(Negate(is.null), bll)
+#filter dup lists
+ingreList = lapply(Bll, unique)
+head(bll)
+```
+
+```{r}
+#寫成transaction file
+trans = as(ingreList, "transactions")
+trans
+```
+
+```{r}
+par(family="Hannotate TC")
+itemFrequencyPlot(trans, support = 0.01, cex.names=1.2,topN=12, main="食材出現頻率",col=heat.colors(12))
+```
+
+```{r}
+#Apriori rules - STRONG rules- visulization用
+rules = apriori(trans, parameter = list(supp = 0.01, conf =0.5, target= "rules"))
+summary(rules)
+head(inspect(rules))
+```
+
+```{r}
+#prun redundant rules
+rules.sorted = sort(rules, by="lift")
+subset.matrix = is.subset(rules.sorted, rules.sorted)
+subset.matrix[lower.tri(subset.matrix, diag=T)] = NA
+redundant = colSums(subset.matrix, na.rm=T) >= 1
+rules.pruned = rules.sorted[!redundant]
+head(inspect(rules.pruned))
+```
+
+```{r}
+plot(sort(rules.pruned, by="lift"), method="graph",control=list(type="itemsets", measureLabels=T))
+```
+
+```{r}
+plot(sort(rules.pruned, by="lift"), method="graph",control=list(type="items", measureLabels=T))
+```
+
+```{r}
+plot(rules.pruned, method="grouped")
+```
+
+```{r}
+#Apriori rules - STRONG rules- visulization用-2-降低minsup門檻 mine interesting rules
+rules = apriori(trans, parameter = list(supp = 0.001, conf =0.5, target= "rules"))
+summary(rules) #459
+inspect(rules)
+```
+
+```{r}
+#prun redundant rules 
+rules.sorted = sort(rules, by="lift")
+subset.matrix = is.subset(rules.sorted, rules.sorted)
+subset.matrix[lower.tri(subset.matrix, diag=T)] = NA
+redundant = colSums(subset.matrix, na.rm=T) >= 1
+rules.pruned = rules.sorted[!redundant]
+inspect(rules.pruned) #309
+```
+
+
+```{r}
+plot(sort(rules.pruned, by="lift"), method="graph",control=list(type="itemsets", measureLabels=T))
+```
+
+
+```{r}
+plot(sort(rules.pruned, by="lift"), method="graph",control=list(type="items", measureLabels=T))
+```
+
+
+```{r}
+plot(rules.pruned, method="grouped")
+```
+
+
+```{r}
+plot(rules.pruned, control=list(col=brewer.pal(9,"Spectral"), main = "Two-key plot", cex=0.5, jitter =2))
+```
+
+
+```{r}
+## 2D matrix with shading
+plot(rules.pruned, method="matrix", measure="lift", control=list(reorder=TRUE, col=brewer.pal(9,"Spectral")))
+```
+
+
+```{r}
+## 3D matrix
+plot(rules.pruned, method="matrix", measure="lift", control=list(reorder=TRUE, col=brewer.pal(9,"Spectral")))
+```
+
+
+```{r}
+## matrix with two measures
+plot(rules.pruned, method="matrix", measure=c("lift", "confidence"), 
+     control=list(reorder=TRUE))
+```
+
+
+```{r}
+## parallel coordinates plot, only work with very few rules
+plot(rules.pruned, method="paracoord", control=list(reorder=TRUE))
+```

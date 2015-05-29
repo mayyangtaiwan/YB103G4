@@ -1,0 +1,21 @@
+Ytower= read.csv('123Ytower.txt', header=T)
+b = tapply(Ytower[,2], Ytower[,1], paste)
+str(b)
+library(arules)
+library(arulesViz)
+par(family="Hannotate TC")
+ingreList = lapply(b, unique)
+trans = as(ingreList, "transactions")
+inspect(trans)
+
+rules = apriori(trans, parameter = list(supp = 0.005, conf =0.5, target= "rules"))
+summary(rules)
+inspect(rules)
+itemFrequencyPlot(trans, support = 0.01, cex.names=1.2,topN=10, main="楊桃網")
+plot(sort(rules, by="lift"), method="graph",control=list(type="itemsets", measureLabels=T),interactive=TRUE)
+
+ingre_rule=apriori(data=trans, parameter=list(supp=0.001,conf= 0.1, minlen=2), appearance = list(default="rhs",lhs="雞蛋"))
+inspect(ingre_rule)
+plot(sort(ingre_rule, by="lift"), method="graph",
+     control=list(type="itemsets", measureLabels=T),interactive=TRUE)
+plot(ingre_rule, method="grouped",interactive=TRUE)

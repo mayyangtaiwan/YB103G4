@@ -1,0 +1,34 @@
+---
+title: "caloris"
+output: html_document
+---
+
+熱量散佈圖
+
+```{r, warning=FALSE,message=FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+calall= read.csv("ingre_cal.csv",sep=",", header =F)
+str(calall)
+```
+
+```{r}
+#filter掉沒有熱量
+calF= filter(calall, V2 != '') 
+#用regex切出小類別代號
+calF[,1] = sub("([[:digit:]]+)", "", calF[,1])
+#排序小類別
+CalO= calF[order(calF[,1]),]
+#filter掉調味料KA, 其他類LA
+Cal1= filter(CalO, V1 != 'LA')
+Cal1= filter(Cal1, V1 != 'KA')
+head(Cal1)
+```
+
+```{r}
+Cal1$V2 = as.numeric(as.character(Cal1$V2))
+qplot(Cal1$V2, Cal1$V1, xlab = 'Ingredients Cal/g', ylab= 'Sub Categories', colour=Cal1$V1)+theme(legend.position="none")
+```
