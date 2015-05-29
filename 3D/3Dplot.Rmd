@@ -1,0 +1,38 @@
+---
+title: "Ingredients-3Dplot"
+output: html_document
+---
+```{r,warning=FALSE,message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(plot3D)
+library(RColorBrewer)
+library(rgl)
+Qoo = read.csv("forplot.csv", sep = ",")
+```
+
+SeaFood!
+
+```{r, echo=FALSE}
+SeaFood= Qoo %>% filter(IngreSubCatNo == 'F')
+par(family='Hannotate TC')
+par(mar=c(0.5,0,0,0))
+text3D(x =SeaFood$V2 , y = SeaFood$IngreCal, z =SeaFood$IngreSeason,
+       phi = 20, ticktype = "detailed",
+       colvar = SeaFood$IngreSeason,col=brewer.pal(6,"Dark2"),theta = 30, d = 6, 
+       labels= SeaFood$V1, pch = 2, cex = 1, 
+       xlab = "Frequency", ylab = "Calories",zlab = "Seasons",colkey = FALSE)
+```
+
+Veg!
+
+```{r, echo=FALSE}
+Veg= Qoo %>% filter(IngreSubCatNo == 'G')
+par(family='Hannotate TC')
+par(mar=c(0.5,0,0,0))
+text3D(x =Veg$V2 , y = Veg$IngreCal, z =Veg$IngreSeason,
+       phi = 20, ticktype = "detailed",
+       colvar = Veg$IngreSeason,col=brewer.pal(6,"Dark2"),theta = 30, d = 6, 
+       labels= Veg$V1, pch = 2, cex = 0.8, 
+       xlab = "Frequency", ylab = "Calories",zlab = "Seasons",colkey = FALSE)
+```
