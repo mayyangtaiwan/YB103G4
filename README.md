@@ -7,9 +7,6 @@ http://goo.gl/sbJ9Gq
 食材搜尋框框 Ingredients Search Box
 http://goo.gl/3tXGHn
 
-食材出現頻率：tableau
- https://public.tableau.com/profile/may4817#!/vizhome/_2995/Story1
-
 強關聯規則視覺化：R (library(arulesViz)) 
 http://rpubs.com/yb103g4/80622
 
