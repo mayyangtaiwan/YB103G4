@@ -1,10 +1,17 @@
-YB103Group4
-===============
-Group4-已爬網站
-1. 楊桃網
-2. 全聯
-3. 我的美食DIY
-4. 自由時報
-5. 菲姊
-http://nbviewer.ipython.org/github/mayyangtaiwan/marketingtaiwan/blob/master/Group4-%E5%B7%B2%E7%88%AC%E7%B6%B2%E7%AB%99.ipynb
+吃什麼好捏轉盤 Recipes Selection Wheel
+http://goo.gl/HDy3uW
 
+食材關聯展示 2086 rules, minsup 0.001
+http://goo.gl/sbJ9Gq
+
+食材搜尋框框 Ingredients Search Box
+http://goo.gl/3tXGHn
+
+食材出現頻率：tableau
+ https://public.tableau.com/profile/may4817#!/vizhome/_2995/Story1
+
+強關聯規則視覺化：R (library(arulesViz)) 
+http://rpubs.com/yb103g4/80622
+
+熱量視覺化：R (llibrary(ggplot2))
+http://rpubs.com/yb103g4/calories
