@@ -10,9 +10,14 @@ Bll = Filter(Negate(is.null), bll)
 ingreList = lapply(Bll, unique)
 trans = as(ingreList, "transactions")
 
-#Apriori rules by lift - 2085條 - 網站用 - no 修剪
-ingre_rule=apriori(data=trans, parameter=list(supp=0.001,conf= 0.1, minlen=2), appearance = list(default="both"))
+#Apriori rules by lift - 2086條 - 網站用 - no 修剪
+ingre_rule=
+  apriori(data=trans, 
+          parameter=list(supp=0.001,conf= 0.1, minlen=2), 
+          appearance = list(default="both"))
+
 summary(ingre_rule)
+head(interestMeasure(ingre_rule, c("support","confidence", "lift","chiSquare","cosine", "oddsRatio"),trans))
 
 rules123=sort(ingre_rule, by="lift", decreasing=TRUE)
 dfrules123 = as(rules123, "data.frame")[,1]
@@ -28,3 +33,4 @@ write.table(dfrules123,"apriori_lift.txt", sep=",", quote=F, row.names= F)
 #轉成df用
 #fff = as(ingre_rule, "data.frame")[,1]
 #write.table(fff, "apriori.txt", sep=",", quote=F, row.names= F)
+

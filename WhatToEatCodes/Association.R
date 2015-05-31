@@ -31,7 +31,7 @@ par(family="Hannotate TC")
 itemFrequencyPlot(trans, support = 0.001, cex.names=1.2,topN=12, main="食材出現頻率",col=heat.colors(12))
 #Apriori rules - STRONG rules- visulization用-1-以麵粉雞蛋乃為主 沒有意外的rules
 #"hyperedgesets", "rules", "closed frequent itemsets", "maximally frequent itemsets", "frequent itemsets"
-rules = apriori(trans, parameter = list(supp = 0.01, conf =0.5, target= "rules"))
+rules = apriori(trans, parameter = list(supp = 0.001, conf =0.5, target= "rules"))
 
 summary(rules)
 inspect(rules)
