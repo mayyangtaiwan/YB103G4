@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> What to eat? | Recipe </title>
+    <script type="text/javascript" src="/static/lib/prototype.js"></script>
+    <script type="text/javascript" src="/static/lib/effects.js"></script>
+    <script type="text/javascript" src="/static/lib/side-bar.js"></script>
+
+    <link href="/static/top.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/lib/top.js"></script>
+        <script src="jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script>
+    </script>
+
+    <style>
+        /****************************************/
+        body {
+        font-family: "Hannotate TC";
+        background:url('b1.jpg'); center center fixed no-repeat; 
+        margin:0px;
+        padding:0px;
+        background-size:cover;
+        }
+
+        #box{
+        box-shadow:rgb(0, 204, 102) 2px 5px 5px;
+        }
+
+        #AIngres{
+        border:1px solid #000;
+        box-shadow:rgb(31, 31, 20) 2px 10px 10px;
+        }
+        #ARcpStep{
+        border:1px solid #000;
+        box-shadow:rgb(31, 31, 20) 2px 10px 10px;
+        }
+
+        a {
+            outline: none;
+        }
+        
+        a:active {
+            outline: none;
+        }
+        
+        #sideBar {
+            text-align: left; //內字體對齊方式
+        }
+        
+        #sideBar h2 {
+            color: #2E16B1; //內標題顏色
+            font-size: 110%; //內標題大小
+            font-family: arial;
+            margin: 10px 10px 10px 10px;
+            font-weight: bold !important;
+        }
+        
+        #sideBar h2 span {
+            font-size: 125%;
+            font-weight: normal !important;
+        }
+        
+        #sideBar ul {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        
+        #sideBar li {
+            margin: 0px 10px 3px 10px;
+            padding: 2px;
+            list-style-type: none;
+            display: block;
+            background-color: #FFFFF; //字底圖色
+            width: 177px;
+            color: #000000; //內font字色
+        }
+        
+        #sideBar li a {
+            width: 100%;
+        }
+        
+        #sideBar li a:link,
+        #sideBar li a:visited {
+            color: #FFFFFF; // li a 標簽字體顏色
+            font-family: verdana;
+            font-size: 100%;
+            text-decoration: none;
+            display: block;
+            margin: 0px 0px 0px 0px;
+            padding: 0px;
+            width: 100%;
+        }
+        
+        #sideBar li a:hover {
+            color: #FFFFFF; // li a 標簽hover的字體顏色
+            text-decoration: underline;
+        }
+        
+        #sideBar {
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: 40px;
+            right: 0px;
+            background-image: url(/static/lib/images/background.gif);
+            background-position: top left;
+            background-repeat: repeat-y;
+        }
+        
+        #sideBarTab {
+            float: left; //表單展開方向
+            height: 137px;
+            width: 28px;
+        }
+        
+        #sideBarTab img {
+            border: 0px solid #FFFFFF;
+        }
+        
+        #sideBarContents {
+            background-color: #FFFFFF; //內框顏色
+            float: left;
+            overflow: hidden !important;
+            width: 200px;
+            height: 320px;
+        }
+        
+        #sideBarContentsInner {
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table width="1000" height='700' align="center" style="border:5px #ccc solid;border-radius:10px;background-color:#eee; opacity: 0.75;">
+        <tr height='40px' width="600" align="center" id="box">
+            <td colspan="13" align="center" bgcolor="green" ><font color="white" size="8" style="letter-spacing:1px;text-indent:1px;line-height: 22px;"><p id="ARcpName"></p></font></td>
+        </tr>
+        <tr>
+            <td width="20" align="left"></td>
+            <td colspan="6">
+                <div style="border:3px #ccc solid;border-radius:10px;background-color:#eee;height:95%;width:80%;margin: 30px auto;padding-top:10px;padding-left:10px;padding-right:10px;padding-bottom:10px;">
+                    <div>
+                        <font size="6"><b>食材</b></font>
+                        <hr align="left" width="50%">
+                    </div>
+                    <p id="AIngres" style="letter-spacing:3px;padding-left:10px;line-height: 30px;"></p>
+                </div>
+            </td>
+            <td colspan="6">
+                 <div style="border:3px #ccc solid;border-radius:10px;background-color:#eee;height:95%;width:90%;margin: 10px auto;padding-top:10px;padding-left:10px;padding-right:10px;padding-bottom:10px;">
+                    <div>
+                        <font  size="6"><b>步驟</b></font>
+                        <hr align="left" width="50%">
+                    </div>
+                    <p id="ARcpStep" style="letter-spacing:3px;padding-left:10px;line-height: 30px;"></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <td width="20" align="left"></td>
+                <td width="90" align="left"><font size="5">熱量：</font></td>
+                <td width="90" align="left"><p id="ARcpTotalCal" style="letter-spacing:1px;text-indent:1px;"></p></td>
+            </td>
+            <td>
+                <td width="20" align="left"></td>
+                <td width="90" align="left"><font size="5">來源：</font></td>
+                <td><p id="ARcpSrc" style="letter-spacing:1px;text-indent:1px;width:85px;"></p></td>
+            </td>
+        </tr>
+    </table>
+
+    <a href="#" onclick="gotoTop();return false;" class="totop"></a>
+    <div id="sideBar">
+
+        <a href="#" id="sideBarTab"><img src="/static/lib/images/slide-button.gif" alt="sideBar" title="sideBar" /></a>
+
+        <div id="sideBarContents" style="display:none;border-radius:20px;">
+            <div id="sideBarContentsInner">
+                <h2><font  style="letter-spacing:1px;text-indent:1px;line-height: 22px;">熱量提醒</font></h2>
+
+                <ul>
+                    <li>
+                        <div><font  style="letter-spacing:1px;text-indent:1px;line-height: 22px;">一天所需的熱量:</font></div>
+                    </li>
+                    <li>
+                        <div><font >1600卡</font></div>
+                    </li>
+                    <li>
+                        <div><font  style="letter-spacing:1px;text-indent:1px;line-height: 22px;">已攝取熱量:</font></div>
+                    </li>
+                    <li>
+                        <div><font >1600卡</font></div>
+                    </li>
+                    <li>
+                        <div><font  style="letter-spacing:1px;text-indent:1px;line-height: 22px;">剩餘熱量:</font></div>
+                    </li>
+                    <li>
+                        <div><font >0卡</font></div>
+                    </li>
+
+
+                    <li><a href="#">Link</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+   
+<script>
+
+var text = '{"Rcp":[{"RcpName":"蒜味香菇雞炊飯","RcpNo":"I00001","RcpTotalCal":"1182","RcpSrc":"愛料理","Ingres":["1.去骨雞腿排3片","2.白米3杯","3.香菇10朵","4.青蔥末3大匙","5.蒜末2大匙","6.蠔油3大匙","7.蒜頭酥1茶匙","8.白胡椒1/2茶匙","9.香油1茶匙","10.醬油膏2大匙","11.香油1大匙","12.米酒1大匙","13.胡椒鹽1/2茶匙"],"RcpStep":["1.主材料備料。去骨雞腿排切成一口大小，乾香菇泡熱水。","2.醃漬料加入雞腿排丁中抓勻備用。","3.適量油熱鍋依序將蒜末和香菇絲炒香。","4.再將醃好的雞腿排丁下鍋一起拌炒到腿排丁顏色開始轉白。","5.再將白米和蔥末一起下鍋，加2大匙米酒(分量外]翻炒。","6.待鍋中的白米翻炒到略有黏性即可關火並移到電鍋中。","7.將調味料及2-2/3杯的水 (使用泡香菇的水及一般的水混合)放入電鍋中，按下煮飯鍵即可。","8.搭配的是萬雷德斯酒莊的陳年不甜氣泡酒。","9.淡雅的果香，酸度適中好入口。氣泡細緻，整體口感清爽卻不失果香風味，是與各種料理都擺搭的白氣泡款:))","10.充分吸收蒜末和香菇香氣的Q軟米飯，以及滑嫩的雞腿丁，將配料充分炒香後放到電鍋中就可以完成的輕鬆料理，搭配白氣           泡酒越能凸顯炊飯的香氣，每一口都超滿足美味。 小提醒: 飲酒過量有礙健康、拒絕酒駕、未滿18歲禁止飲酒"]}]}';
+// var  text = $.getJSON("rcp.json",function(){
+// console.log("success");
+// });
+
+obj = JSON.parse(text);
+document.getElementById("ARcpName").innerHTML = obj.Rcp[0].RcpName;
+//document.getElementById("ARcpNo").innerHTML =obj.Rcp[0].RcpNo;
+document.getElementById("ARcpTotalCal").innerHTML =obj.Rcp[0].RcpTotalCal+"大卡";
+document.getElementById("ARcpSrc").innerHTML =obj.Rcp[0].RcpSrc;
+
+var Ingres1 = String(obj.Rcp[0].Ingres).split(",")
+var Ingres2 = "";
+var i;
+for (i = 0; i < Ingres1 .length; i++) {
+    Ingres2 += Ingres1[i] + "<br>";
+}
+document.getElementById("AIngres").innerHTML = Ingres2.split(",");
+
+var RcpStep1 = String(obj.Rcp[0].RcpStep).split(",")
+var RcpStep2 = "";
+var i;
+for (i = 0; i < RcpStep1 .length; i++) {
+    RcpStep2 += RcpStep1[i] + "<br>";
+}
+document.getElementById("ARcpStep").innerHTML =RcpStep2.split(",");// JavaScript Document
+</script>
+</body>
+
+</html>
