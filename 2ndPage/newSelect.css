@@ -1,0 +1,51 @@
+body {
+	/* 配合視窗大小調整圖片大小 */
+	background:url('grid3.png'); center center fixed no-repeat; 
+	margin:0px;
+	padding:0px;
+	background-size:cover;	
+}
+
+#test {
+	margin: 3px;   
+	float: left;
+	padding-left: 2px;
+	padding-right: 2px;
+	font-family:"LiHei Pro";
+	font-size: 18px;
+	border:1px solid #000;
+	border-radius: 5px;
+	box-shadow:rgb(31, 31, 20) 2px 2px 2px;
+	background-color: orange;
+}
+
+
+table{
+	position: fixed;
+    top: 7em;
+    right: 7em; 
+}
+.droptrue{
+	 width: 550px;
+	 height: 250px; 
+	   background: -webkit-linear-gradient(left top, #FFFF66 , #FFCC00); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #FFFF66 , #FFCC00); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #FFFF66 , #FFCC00); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #FFFF66 , #FFCC00); /* Standard syntax */
+	border-radius: 5px;
+	box-shadow: 6px 6px 6px #FFFF66 ,10px 10px 10px #FFCC00; 
+}
+
+/*選擇食材*/
+.tagBox{	
+	width:650px;
+	float:left;
+	position:relative;  
+	text-align:left;
+	font-size:16px;                     
+	font-family:"Hannotate TC";
+	line-height:20px;     /*文字行距*/
+	letter-spacing:2px;   /*文字間距*/
+}
+
+
