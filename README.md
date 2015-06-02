@@ -1,4 +1,9 @@
-吃什麼好捏轉盤 Recipes Selection Wheel
+2rd Page Selection
+
+
+4th Page Rcp
+
+3rd Page 吃什麼好捏轉盤 Recipes Selection Wheel
 http://goo.gl/HDy3uW
 
 DATA VIZ! 食材出現頻率, 關聯展示, 分群 等等

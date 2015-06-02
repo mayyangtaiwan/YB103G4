@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>newSelect</title>
+  <script src="jquery-1.11.2.js"></script>
+  <script src="jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div class="IngreMainCat">
+      <h4>Beef</h4>
+      <div id="AllTable">
+        <div class="test">Beef_1</div>
+        <div class="test">Beef_2</div>
+        <div class="test">Beef_3</div>
+        <div class="test">Beef_4</div>
+        <div class="test">Beef_5</div>
+       </div> 
+      <h4>Pork</h4>
+      <div id="AllTable">
+        <div class="test">Pork_1</div>
+        <div class="test">Pork_2</div>
+        <div class="test">Pork_3</div>
+        <div class="test">Pork_4</div>
+        <div class="test">Pork_5</div>
+      </div>
+      <h4>Chicken</h4>
+      <div id="AllTable">
+        <div class="test">Chicken_1</div>
+        <div class="test">Chicken_2</div>
+        <div class="test">Chicken_3</div>
+        <div class="test">Chicken_4</div>
+        <div class="test">Chicken_5</div>
+      </div>
+    </div>  
+
+
+<table>
+  <tr>
+    <td>
+      <div>Like</div></td>
+      </tr>
+  <tr> 
+    <td  class="LikeBox">    
+      <div>
+      <div id="likeTable" class="droptrue"> 
+      </div>
+    </div>
+  </td>
+  </tr>
+  <tr> 
+    <td>
+      <div>Hate</div>
+    </td>
+      </tr>
+  <tr> 
+    <td class="HateBox">
+      <div>
+        <div id="hateTable" class="droptrue"> 
+        </div>
+      </div>
+    </td>
+  </tr> 
+</table>
+
+
+</body>
+</html>
+
+
+<style>
+
+#AllTable{
+  border:black;
+}
+
+.test {
+  margin: 3px;  
+  width: 55px;
+  float: left;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 12px;
+  border:1px solid #000;
+  border-radius: 5px;
+}
+
+
+table{
+  position: relative;
+    border:1px solid #000;
+}
+
+.droptrue{
+   width: 100px;
+   height: 100px; 
+}
+
+</style>
+
+
+<script>
+Like = [];
+Hate = [];
+
+$(function() {
+  $( "#AllTable .test" ).draggable({
+    appendTo: "body",
+    helper: "clone",
+        revert: "invalid",
+    });
+
+  $( ".LikeBox div" ).droppable({
+    drop: function( event, ui ) {
+      var $item = ui.draggable;
+      $item.appendTo("#likeTable");
+          var ingre = $item.text();
+          
+          alert(ingre);
+          Like.push(ingre) ;
+          Like = $.unique(Like)
+    } 
+    }); 
+
+    $( ".HateBox div" ).droppable({
+    drop: function( event, ui ) {
+      var $item = ui.draggable;
+      $item.appendTo("#hateTable");
+
+          var ingre = $item.text();
+          Hate.push(ingre);
+          Hate = $.unique(Hate)
+    } 
+    }); 
+    
+    $(function() {
+  $('.IngreMainCat').accordion();
+});
+});
+</script>

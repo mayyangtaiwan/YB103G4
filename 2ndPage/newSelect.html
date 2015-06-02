@@ -1,702 +1,718 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>newSelect</title>
-  <link rel="stylesheet" href="newSelect.css" />
-  <link rel="stylesheet" href="bootstrap.min.css" >
-  <link rel="stylesheet" href="jquery-ui.css">
-  <script src="jquery-1.11.2.js"></script>
-  <script src="jquery.easing.1.3.js"></script>
-  <script src="jquery.color.js"></script>
-  <script src="jquery.min.js"></script>
-  <script src="bootstrap.min.js"></script>
-  <script src="newSelect.js"></script>
-  <link rel="stylesheet" href="bariol.css"/>
-    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
- <!--   <link rel="stylesheet" href="styles/style.css">
-  
-  <script type="text/javascript" src="scripts/d3.min.js"></script>
-  <script type="text/javascript" src="scripts/autocomplete.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['wordtree']}]}"></script> -->
-
-
+<meta charset="utf-8" />
+<title>newSelect</title>
+<link rel="stylesheet" href="newSelect.css" />
+<link rel="stylesheet" href="bootstrap.min.css" >
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-1.11.2.js"></script>
+<script src="jquery.easing.1.3.js"></script>
+<script src="jquery.color.js"></script>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="newSelect.js"></script>
+<link rel="stylesheet" href="bariol.css"/>
+<script src="jquery-ui.js"></script>
 </head>
-
 <body>
 
-  <div style="font:bold 20px Chalkduster; color: white; background-color: green;padding: 10px 10px;width:650px;"> Hi there, select what you have or what you like ... :) </div>
-  <div class="tagBox">
-<span>
-    <div><h3>牛肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-A" style="float:right;width:30px;position:relative;"></div></span>
+<div style="font:bold 20px Chalkduster; color: white; background-color: green;padding: 10px 10px;width:650px;"> Hi there, select what you have or what you like ... :) </div>
+<div class="tagBox">
+  <span>
+    <div><h3>牛肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" class="meat" id="slider-range-A" style="float:right;width:100px;position:relative;"></div></span>
     <div class="IngreMainCat">
       <h4>牛肉類</h4>
       <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
+        <div class="test">牛肉</div>
+        <div class="test">雞肉</div>
+        <div class="test">豬肉</div>
+        <div class="test">羊肉</div>
+        <div class="test">魚肉</div>
+        <div class="test">魚肉</div>
+        <div class="test">牛肉牛肉</div>
+        <div class="test">雞肉雞肉</div>
+        <div class="test">豬肉豬</div>
+        <div class="test">羊肉肉</div>
+        <div class="test">魚肉肉</div>
+        <div class="test">魚肉肉</div>
       </div> 
       <h4>內臟及其他部位</h4>
       <div id="AllTable">
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
+        <div class="test">1雞肉</div>
+        <div class="test">1豬肉</div>
+        <div class="test">1羊肉</div>
+        <div class="test">1魚肉</div>
+        <div class="test">1魚肉</div>
+        <div class="test">1牛肉牛肉</div>
+        <div class="test">1雞肉雞肉</div>
+        <div class="test">1豬肉豬</div>
+        <div class="test">1羊肉肉</div>
+        <div class="test">1魚肉肉</div>
+        <div class="test">1魚肉肉</div>
       </div>
       <h4>牛加工製品</h4>
       <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
+        <div class="test">1牛肉</div>
+        <div class="test">1雞肉</div>
+        <div class="test">1豬肉</div>
+        <div class="test">1羊肉</div>
+        <div class="test">1魚肉</div>
+        <div class="test">1魚肉</div>
+        <div class="test">1牛肉牛肉</div>
+        <div class="test">1雞肉雞肉</div>
+        <div class="test">1豬肉豬</div>
+        <div class="test">1羊肉肉</div>
+        <div class="test">1魚肉肉</div>
+        <div class="test">1魚肉肉</div>
       </div>
     </div>      
 
-        <span>
-    <div><h3>豬肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-B" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>豬肉類</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
+    <span>
+      <div><h3>豬肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" class="meat" id="slider-range-B" style="float:right;width:100px;position:relative;"></div></span>
+      <div class="IngreMainCat">
+        <h4>豬肉類</h4>
+        <div id="AllTable">
+          <div class="test">牛肉</div>
+          <div class="test">雞肉</div>
+          <div class="test">豬肉</div>
+          <div class="test">羊肉</div>
+          <div class="test">魚肉</div>
+          <div class="test">魚肉</div>
+          <div class="test">牛肉牛肉</div>
+          <div class="test">雞肉雞肉</div>
+          <div class="test">豬肉豬</div>
+          <div class="test">羊肉肉</div>
+          <div class="test">魚肉肉</div>
+          <div class="test">魚肉肉</div>
+        </div> 
+        <h4>內臟及其他部位</h4>
+        <div id="AllTable">
+          <div class="test">1牛肉</div>
+          <div class="test">1雞肉</div>
+          <div class="test">1豬肉</div>
+          <div class="test">1羊肉</div>
+          <div class="test">1魚肉</div>
+          <div class="test">1魚肉</div>
+          <div class="test">1牛肉牛肉</div>
+          <div class="test">1雞肉雞肉</div>
+          <div class="test">1豬肉豬</div>
+          <div class="test">1羊肉肉</div>
+          <div class="test">1魚肉肉</div>
+          <div class="test">1魚肉肉</div>
+        </div>
+        <h4>豬加工製品</h4>
+        <div id="AllTable">
+          <div class="test">1牛肉</div>
+          <div class="test">1雞肉</div>
+          <div class="test">1豬肉</div>
+          <div class="test">1羊肉</div>
+          <div class="test">1魚肉</div>
+          <div class="test">1魚肉</div>
+          <div class="test">1牛肉牛肉</div>
+          <div class="test">1雞肉雞肉</div>
+          <div class="test">1豬肉豬</div>
+          <div class="test">1羊肉肉</div>
+          <div class="test">1魚肉肉</div>
+          <div class="test">1魚肉肉</div>
+        </div>
       </div> 
-      <h4>內臟及其他部位</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>豬加工製品</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
+
+      <span>
+        <div><h3>雞肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" class="meat" id="slider-range-C" style="float:right;width:100px;position:relative;"></div></span>
+        <div class="IngreMainCat">
+          <h4>雞肉類</h4>
+          <div id="AllTable">
+            <div class="test">牛肉</div>
+            <div class="test">雞肉</div>
+            <div class="test">豬肉</div>
+            <div class="test">羊肉</div>
+            <div class="test">魚肉</div>
+            <div class="test">魚肉</div>
+            <div class="test">牛肉牛肉</div>
+            <div class="test">雞肉雞肉</div>
+            <div class="test">豬肉豬</div>
+            <div class="test">羊肉肉</div>
+            <div class="test">魚肉肉</div>
+            <div class="test">魚肉肉</div>
+          </div> 
+          <h4>內臟及其他部位</h4>
+          <div id="AllTable">
+            <div class="test">1牛肉</div>
+            <div class="test">1雞肉</div>
+            <div class="test">1豬肉</div>
+            <div class="test">1羊肉</div>
+            <div class="test">1魚肉</div>
+            <div class="test">1魚肉</div>
+            <div class="test">1牛肉牛肉</div>
+            <div class="test">1雞肉雞肉</div>
+            <div class="test">1豬肉豬</div>
+            <div class="test">1羊肉肉</div>
+            <div class="test">1魚肉肉</div>
+            <div class="test">1魚肉肉</div>
+          </div>
+        </div>
 
         <span>
-    <div><h3>雞肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-C" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>雞肉類</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>內臟及其他部位</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div>
+          <div><h3>羊肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" class="meat" id="slider-range-D" style="float:right;width:100px;position:relative;"></div></span>
+          <div class="IngreMainCat">
+            <h4>羊肉類</h4>
+            <div id="AllTable">
+              <div class="test">牛肉</div>
+              <div class="test">雞肉</div>
+              <div class="test">豬肉</div>
+              <div class="test">羊肉</div>
+              <div class="test">魚肉</div>
+              <div class="test">魚肉</div>
+              <div class="test">牛肉牛肉</div>
+              <div class="test">雞肉雞肉</div>
+              <div class="test">豬肉豬</div>
+              <div class="test">羊肉肉</div>
+              <div class="test">魚肉肉</div>
+              <div class="test">魚肉肉</div>
+            </div> 
+            <h4>內臟及其他部位</h4>
+            <div id="AllTable">
+              <div class="test">1牛肉</div>
+              <div class="test">1雞肉</div>
+              <div class="test">1豬肉</div>
+              <div class="test">1羊肉</div>
+              <div class="test">1魚肉</div>
+              <div class="test">1魚肉</div>
+              <div class="test">1牛肉牛肉</div>
+              <div class="test">1雞肉雞肉</div>
+              <div class="test">1豬肉豬</div>
+              <div class="test">1羊肉肉</div>
+              <div class="test">1魚肉肉</div>
+              <div class="test">1魚肉肉</div>
+            </div>
+          </div> 
 
-        <span>
-    <div><h3>羊肉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-D" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>羊肉類</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>內臟及其他部位</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
+          <span>
+            <div><h3>其他肉類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" class="meat" id="slider-range-E" style="float:right;width:100px;position:relative;"></div></span>
+            <div class="IngreMainCat">
+              <h4>鵝肉類</h4>
+              <div id="AllTable">
+                <div class="test">牛肉</div>
+                <div class="test">雞肉</div>
+                <div class="test">豬肉</div>
+                <div class="test">羊肉</div>
+                <div class="test">魚肉</div>
+                <div class="test">魚肉</div>
+                <div class="test">牛肉牛肉</div>
+                <div class="test">雞肉雞肉</div>
+                <div class="test">豬肉豬</div>
+                <div class="test">羊肉肉</div>
+                <div class="test">魚肉肉</div>
+                <div class="test">魚肉肉</div>
+              </div> 
+              <h4>鴨肉類</h4>
+              <div id="AllTable">
+                <div class="test">1牛肉</div>
+                <div class="test">1雞肉</div>
+                <div class="test">1豬肉</div>
+                <div class="test">1羊肉</div>
+                <div class="test">1魚肉</div>
+                <div class="test">1魚肉</div>
+                <div class="test">1牛肉牛肉</div>
+                <div class="test">1雞肉雞肉</div>
+                <div class="test">1豬肉豬</div>
+                <div class="test">1羊肉肉</div>
+                <div class="test">1魚肉肉</div>
+                <div class="test">1魚肉肉</div>
+              </div>
+              <h4>其他肉類</h4>
+              <div id="AllTable">
+                <div class="test">1牛肉</div>
+                <div class="test">1雞肉</div>
+                <div class="test">1豬肉</div>
+                <div class="test">1羊肉</div>
+                <div class="test">1魚肉</div>
+                <div class="test">1魚肉</div>
+                <div class="test">1牛肉牛肉</div>
+                <div class="test">1雞肉雞肉</div>
+                <div class="test">1豬肉豬</div>
+                <div class="test">1羊肉肉</div>
+                <div class="test">1魚肉肉</div>
+                <div class="test">1魚肉肉</div>
+              </div>
+            </div> 
+            <span>
+              <div><h3>海鮮類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-F" style="float:right;width:100px;position:relative;"></div></span>
+              <div class="IngreMainCat">
+                <h4>頭足&軟體動物</h4>
+                <div id="AllTable">
+                  <div class="test">牛肉</div>
+                  <div class="test">雞肉</div>
+                  <div class="test">豬肉</div>
+                  <div class="test">羊肉</div>
+                  <div class="test">魚肉</div>
+                  <div class="test">魚肉</div>
+                  <div class="test">牛肉牛肉</div>
+                  <div class="test">雞肉雞肉</div>
+                  <div class="test">豬肉豬</div>
+                  <div class="test">羊肉肉</div>
+                  <div class="test">魚肉肉</div>
+                  <div class="test">魚肉肉</div>
+                </div> 
+                <h4>貝類</h4>
+                <div id="AllTable">
+                  <div class="test">1牛肉</div>
+                  <div class="test">1雞肉</div>
+                  <div class="test">1豬肉</div>
+                  <div class="test">1羊肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1牛肉牛肉</div>
+                  <div class="test">1雞肉雞肉</div>
+                  <div class="test">1豬肉豬</div>
+                  <div class="test">1羊肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                </div>
+                <h4>甲殼類</h4>
+                <div id="AllTable">
+                  <div class="test">1牛肉</div>
+                  <div class="test">1雞肉</div>
+                  <div class="test">1豬肉</div>
+                  <div class="test">1羊肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1牛肉牛肉</div>
+                  <div class="test">1雞肉雞肉</div>
+                  <div class="test">1豬肉豬</div>
+                  <div class="test">1羊肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                </div>
+                <h4>魚類</h4>
+                <div id="AllTable">
+                  <div class="test">1牛肉</div>
+                  <div class="test">1雞肉</div>
+                  <div class="test">1豬肉</div>
+                  <div class="test">1羊肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1牛肉牛肉</div>
+                  <div class="test">1雞肉雞肉</div>
+                  <div class="test">1豬肉豬</div>
+                  <div class="test">1羊肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                </div>
+                <h4>其他類</h4>
+                <div id="AllTable">
+                  <div class="test">1牛肉</div>
+                  <div class="test">1雞肉</div>
+                  <div class="test">1豬肉</div>
+                  <div class="test">1羊肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1牛肉牛肉</div>
+                  <div class="test">1雞肉雞肉</div>
+                  <div class="test">1豬肉豬</div>
+                  <div class="test">1羊肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                </div>
+                <h4>魚類加工品</h4>
+                <div id="AllTable">
+                  <div class="test">1牛肉</div>
+                  <div class="test">1雞肉</div>
+                  <div class="test">1豬肉</div>
+                  <div class="test">1羊肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1魚肉</div>
+                  <div class="test">1牛肉牛肉</div>
+                  <div class="test">1雞肉雞肉</div>
+                  <div class="test">1豬肉豬</div>
+                  <div class="test">1羊肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                  <div class="test">1魚肉肉</div>
+                </div>
+              </div> 
 
-        <span>
-    <div><h3>其他肉類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-E" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>鵝肉類</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>鴨肉類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>其他肉類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
-        <span>
-    <div><h3>海鮮類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-F" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>頭足&軟體動物</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>貝類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>甲殼類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>魚類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>其他類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>魚類加工品</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
+              <span>
+                <div><h3>蔬菜類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-G" style="float:right;width:100px;position:relative;"></div></span>
+                <div class="IngreMainCat">
+                  <h4>瓜果類</h4>
+                  <div id="AllTable">
+                    <div class="test">牛肉</div>
+                    <div class="test">雞肉</div>
+                    <div class="test">豬肉</div>
+                    <div class="test">羊肉</div>
+                    <div class="test">魚肉</div>
+                    <div class="test">魚肉</div>
+                    <div class="test">牛肉牛肉</div>
+                    <div class="test">雞肉雞肉</div>
+                    <div class="test">豬肉豬</div>
+                    <div class="test">羊肉肉</div>
+                    <div class="test">魚肉肉</div>
+                    <div class="test">魚肉肉</div>
+                  </div> 
+                  <h4>水果類</h4>
+                  <div id="AllTable">
+                    <div class="test">1牛肉</div>
+                    <div class="test">1雞肉</div>
+                    <div class="test">1豬肉</div>
+                    <div class="test">1羊肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1牛肉牛肉</div>
+                    <div class="test">1雞肉雞肉</div>
+                    <div class="test">1豬肉豬</div>
+                    <div class="test">1羊肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                  </div>
+                  <h4>葉菜類</h4>
+                  <div id="AllTable">
+                    <div class="test">1牛肉</div>
+                    <div class="test">1雞肉</div>
+                    <div class="test">1豬肉</div>
+                    <div class="test">1羊肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1牛肉牛肉</div>
+                    <div class="test">1雞肉雞肉</div>
+                    <div class="test">1豬肉豬</div>
+                    <div class="test">1羊肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                  </div>
+                  <h4>菜豆</h4>
+                  <div id="AllTable">
+                    <div class="test">1牛肉</div>
+                    <div class="test">1雞肉</div>
+                    <div class="test">1豬肉</div>
+                    <div class="test">1羊肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1牛肉牛肉</div>
+                    <div class="test">1雞肉雞肉</div>
+                    <div class="test">1豬肉豬</div>
+                    <div class="test">1羊肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                  </div>
+                  <h4>根莖</h4>
+                  <div id="AllTable">
+                    <div class="test">1牛肉</div>
+                    <div class="test">1雞肉</div>
+                    <div class="test">1豬肉</div>
+                    <div class="test">1羊肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1牛肉牛肉</div>
+                    <div class="test">1雞肉雞肉</div>
+                    <div class="test">1豬肉豬</div>
+                    <div class="test">1羊肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                  </div>
+                  <h4>其他</h4>
+                  <div id="AllTable">
+                    <div class="test">1牛肉</div>
+                    <div class="test">1雞肉</div>
+                    <div class="test">1豬肉</div>
+                    <div class="test">1羊肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1牛肉牛肉</div>
+                    <div class="test">1雞肉雞肉</div>
+                    <div class="test">1豬肉豬</div>
+                    <div class="test">1羊肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                  </div>
+                  <h4>蔬菜水果加工品</h4>
+                  <div id="AllTable">
+                    <div class="test">1牛肉</div>
+                    <div class="test">1雞肉</div>
+                    <div class="test">1豬肉</div>
+                    <div class="test">1羊肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1魚肉</div>
+                    <div class="test">1牛肉牛肉</div>
+                    <div class="test">1雞肉雞肉</div>
+                    <div class="test">1豬肉豬</div>
+                    <div class="test">1羊肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                    <div class="test">1魚肉肉</div>
+                  </div>
+                </div> 
 
-        <span>
-    <div><h3>蔬菜類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-G" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>瓜果類</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>水果類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>葉菜類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>菜豆</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>根莖</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>其他</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>蔬菜水果加工品</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
+                <span>
+                  <div><h3>蛋、豆、奶、豆製品類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-H" style="float:right;width:100px;position:relative;"></div></span>
+                  <div class="IngreMainCat">
+                    <h4>豆製品類</h4>
+                    <div id="AllTable">
+                      <div class="test">牛肉</div>
+                      <div class="test">雞肉</div>
+                      <div class="test">豬肉</div>
+                      <div class="test">羊肉</div>
+                      <div class="test">魚肉</div>
+                      <div class="test">魚肉</div>
+                      <div class="test">牛肉牛肉</div>
+                      <div class="test">雞肉雞肉</div>
+                      <div class="test">豬肉豬</div>
+                      <div class="test">羊肉肉</div>
+                      <div class="test">魚肉肉</div>
+                      <div class="test">魚肉肉</div>
+                    </div> 
+                    <h4>蛋類</h4>
+                    <div id="AllTable">
+                      <div class="test">1牛肉</div>
+                      <div class="test">1雞肉</div>
+                      <div class="test">1豬肉</div>
+                      <div class="test">1羊肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1牛肉牛肉</div>
+                      <div class="test">1雞肉雞肉</div>
+                      <div class="test">1豬肉豬</div>
+                      <div class="test">1羊肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                    </div>
+                    <h4>豆類</h4>
+                    <div id="AllTable">
+                      <div class="test">1牛肉</div>
+                      <div class="test">1雞肉</div>
+                      <div class="test">1豬肉</div>
+                      <div class="test">1羊肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1牛肉牛肉</div>
+                      <div class="test">1雞肉雞肉</div>
+                      <div class="test">1豬肉豬</div>
+                      <div class="test">1羊肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                    </div>
+                    <h4>奶類</h4>
+                    <div id="AllTable">
+                      <div class="test">1牛肉</div>
+                      <div class="test">1雞肉</div>
+                      <div class="test">1豬肉</div>
+                      <div class="test">1羊肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1牛肉牛肉</div>
+                      <div class="test">1雞肉雞肉</div>
+                      <div class="test">1豬肉豬</div>
+                      <div class="test">1羊肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                    </div>
+                    <h4>起司類</h4>
+                    <div id="AllTable">
+                      <div class="test">1牛肉</div>
+                      <div class="test">1雞肉</div>
+                      <div class="test">1豬肉</div>
+                      <div class="test">1羊肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1魚肉</div>
+                      <div class="test">1牛肉牛肉</div>
+                      <div class="test">1雞肉雞肉</div>
+                      <div class="test">1豬肉豬</div>
+                      <div class="test">1羊肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                      <div class="test">1魚肉肉</div>
+                    </div>
+                  </div> 
 
-        <span>
-    <div><h3>蛋、豆、奶、豆製品類</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-H" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>豆製品類</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>蛋類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>豆類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>奶類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>起司類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
+                  <span>
+                    <div><h3>海菜菇蕈中藥</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-I" style="float:right;width:100px;position:relative;"></div></span>
+                    <div class="IngreMainCat">
+                      <h4>海菜</h4>
+                      <div id="AllTable">
+                        <div class="test">牛肉</div>
+                        <div class="test">雞肉</div>
+                        <div class="test">豬肉</div>
+                        <div class="test">羊肉</div>
+                        <div class="test">魚肉</div>
+                        <div class="test">魚肉</div>
+                        <div class="test">牛肉牛肉</div>
+                        <div class="test">雞肉雞肉</div>
+                        <div class="test">豬肉豬</div>
+                        <div class="test">羊肉肉</div>
+                        <div class="test">魚肉肉</div>
+                        <div class="test">魚肉肉</div>
+                      </div> 
+                      <h4>菇蕈</h4>
+                      <div id="AllTable">
+                        <div class="test">1牛肉</div>
+                        <div class="test">1雞肉</div>
+                        <div class="test">1豬肉</div>
+                        <div class="test">1羊肉</div>
+                        <div class="test">1魚肉</div>
+                        <div class="test">1魚肉</div>
+                        <div class="test">1牛肉牛肉</div>
+                        <div class="test">1雞肉雞肉</div>
+                        <div class="test">1豬肉豬</div>
+                        <div class="test">1羊肉肉</div>
+                        <div class="test">1魚肉肉</div>
+                        <div class="test">1魚肉肉</div>
+                      </div>
+                      <h4>藥材</h4>
+                      <div id="AllTable">
+                        <div class="test">1牛肉</div>
+                        <div class="test">1雞肉</div>
+                        <div class="test">1豬肉</div>
+                        <div class="test">1羊肉</div>
+                        <div class="test">1魚肉</div>
+                        <div class="test">1魚肉</div>
+                        <div class="test">1牛肉牛肉</div>
+                        <div class="test">1雞肉雞肉</div>
+                        <div class="test">1豬肉豬</div>
+                        <div class="test">1羊肉肉</div>
+                        <div class="test">1魚肉肉</div>
+                        <div class="test">1魚肉肉</div>
+                      </div>
+                    </div> 
 
-        <span>
-    <div><h3>海菜菇蕈中藥</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-I" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>海菜</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>菇蕈</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>藥材</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
+                    <span>
+                      <div><h3>五穀雜糧澱粉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-J" style="float:right;width:100px;position:relative;"></div></span>
+                      <div class="IngreMainCat">
+                        <h4>米&飯</h4>
+                        <div id="AllTable">
+                          <div class="test">牛肉</div>
+                          <div class="test">雞肉</div>
+                          <div class="test">豬肉</div>
+                          <div class="test">羊肉</div>
+                          <div class="test">魚肉</div>
+                          <div class="test">魚肉</div>
+                          <div class="test">牛肉牛肉</div>
+                          <div class="test">雞肉雞肉</div>
+                          <div class="test">豬肉豬</div>
+                          <div class="test">羊肉肉</div>
+                          <div class="test">魚肉肉</div>
+                          <div class="test">魚肉肉</div>
+                        </div> 
+                        <h4>五穀粉體</h4>
+                        <div id="AllTable">
+                          <div class="test">1牛肉</div>
+                          <div class="test">1雞肉</div>
+                          <div class="test">1豬肉</div>
+                          <div class="test">1羊肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1牛肉牛肉</div>
+                          <div class="test">1雞肉雞肉</div>
+                          <div class="test">1豬肉豬</div>
+                          <div class="test">1羊肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                        </div>
+                        <h4>五穀製品</h4>
+                        <div id="AllTable">
+                          <div class="test">1牛肉</div>
+                          <div class="test">1雞肉</div>
+                          <div class="test">1豬肉</div>
+                          <div class="test">1羊肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1牛肉牛肉</div>
+                          <div class="test">1雞肉雞肉</div>
+                          <div class="test">1豬肉豬</div>
+                          <div class="test">1羊肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                        </div>
+                        <h4>麵體</h4>
+                        <div id="AllTable">
+                          <div class="test">1牛肉</div>
+                          <div class="test">1雞肉</div>
+                          <div class="test">1豬肉</div>
+                          <div class="test">1羊肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1牛肉牛肉</div>
+                          <div class="test">1雞肉雞肉</div>
+                          <div class="test">1豬肉豬</div>
+                          <div class="test">1羊肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                        </div>
+                        <h4>其他五穀類</h4>
+                        <div id="AllTable">
+                          <div class="test">1牛肉</div>
+                          <div class="test">1雞肉</div>
+                          <div class="test">1豬肉</div>
+                          <div class="test">1羊肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1牛肉牛肉</div>
+                          <div class="test">1雞肉雞肉</div>
+                          <div class="test">1豬肉豬</div>
+                          <div class="test">1羊肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                        </div>
+                        <h4>其他五穀製品</h4>
+                        <div id="AllTable">
+                          <div class="test">1牛肉</div>
+                          <div class="test">1雞肉</div>
+                          <div class="test">1豬肉</div>
+                          <div class="test">1羊肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1魚肉</div>
+                          <div class="test">1牛肉牛肉</div>
+                          <div class="test">1雞肉雞肉</div>
+                          <div class="test">1豬肉豬</div>
+                          <div class="test">1羊肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                          <div class="test">1魚肉肉</div>
+                        </div>
+                      </div> 
+                    </div>
 
-        <span>
-    <div><h3>五穀雜糧澱粉</h3></div><div title="很喜歡這個類別？把bar拉成橘色八！" id="slider-range-J" style="float:right;width:30px;position:relative;"></div></span>
-    <div class="IngreMainCat">
-      <h4>米&飯</h4>
-      <div id="AllTable">
-        <div id="test">牛肉</div>
-        <div id="test">雞肉</div>
-        <div id="test">豬肉</div>
-        <div id="test">羊肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">魚肉</div>
-        <div id="test">牛肉牛肉</div>
-        <div id="test">雞肉雞肉</div>
-        <div id="test">豬肉豬</div>
-        <div id="test">羊肉肉</div>
-        <div id="test">魚肉肉</div>
-        <div id="test">魚肉肉</div>
-      </div> 
-      <h4>五穀粉體</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>五穀製品</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>麵體</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>其他五穀類</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-      <h4>其他五穀製品</h4>
-      <div id="AllTable">
-        <div id="test">1牛肉</div>
-        <div id="test">1雞肉</div>
-        <div id="test">1豬肉</div>
-        <div id="test">1羊肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1魚肉</div>
-        <div id="test">1牛肉牛肉</div>
-        <div id="test">1雞肉雞肉</div>
-        <div id="test">1豬肉豬</div>
-        <div id="test">1羊肉肉</div>
-        <div id="test">1魚肉肉</div>
-        <div id="test">1魚肉肉</div>
-      </div>
-    </div> 
-  </div>
 
 <table>
-  <tr>
-    <td>
-      <div style="font:bold 18px Chalkduster; color: white; background-color: grey;padding: 10px 10px; box-shadow: 16px 16px 16px #797970;border-radius: 5px;">I want to eat ... :P </div></td>
-      </tr>
-  <tr> 
-    <td  class="LikeBox">    
+<tr>
+  <td>
+    <div class="calories" style="float:right;">
+      <p>
+        <label for="amount" style="font:bold 15px Chalkduster; padding: 10px 10px;">Set Calories Range : </label>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </p>
+      <div id="slider-range"></div>
       <div>
-      <div id="likeTable" class="droptrue"> 
+        <div id="dialog" title="BMR Calculator">
+          <iframe id="bmrCal" style="width:430px; height:420px; border:0; overflow: 0;" frameborder="0" src="http://img.vemmamax.com/app/bmi2.htm?iframe=true&width=100%&height=100%">
+          </iframe> 
+        </div>
+        <div style="padding-top: 10px; text-align: center">
+          <button id="opener">我一天可吃幾卡壓?</button>
+        </div>
       </div>
     </div>
   </td>
+</tr>
+<tr>
+  <td><div style="height:10px;"></div></td>
+</tr>
+<tr>
+  <td>
+    <div style="font:bold 18px Chalkduster; color: white; background-color: grey;padding: 10px 10px; box-shadow: 16px 16px 16px #797970;border-radius: 5px;">I want to eat ... :P </div></td>
   </tr>
-   <tr>
+  <tr> 
+    <td  class="LikeBox">    
+      <div>
+        <div id="likeTable" class="droptrue"> 
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td><div style="height:20px;"></div></td>
-      </tr>
+  </tr>
   <tr> 
     <td>
       <div style="font:bold 18px Chalkduster; color: white; background-color: grey;padding: 10px 10px; box-shadow: 16px 16px 16px #797970;border-radius: 5px;">I DO NOT want to eat ... :( </div>
     </td>
-      </tr>
+  </tr>
   <tr> 
     <td class="HateBox">
       <div>
@@ -706,12 +722,6 @@
     </td>
   </tr> 
 </table>
-
-
-<!--   <div id="SearchBox" style="position:fixed; top:0px; left:0px; "></div> -->
-
-
-
 
 </body>
 </html>
