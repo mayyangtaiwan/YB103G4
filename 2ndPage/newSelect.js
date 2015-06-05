@@ -19,9 +19,8 @@ Hate = [];
     $( ".tagBox #AllTable" ).droppable({
       drop: function( event, ui ) {
         var $item = ui.draggable;
-        $item.appendTo("#AllTable");
+        $item.appendTo(".tagBox #AllTable");
         var ingre = $item.text();
-        Like.pop(ingre);
         if($.inArray(ingre,Hate) > -1){
           var index = Hate.indexOf(ingre);
           if (index > -1) {
