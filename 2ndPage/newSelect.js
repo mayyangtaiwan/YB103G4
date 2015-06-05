@@ -260,3 +260,55 @@ CalRange = {"min":75,"max":800 }
     $( document ).tooltip();
   });
 
+  $(function() {
+    $(window).load(function(){
+      //$('#nav').stop().animate({'opacity':'0.2'},400);
+      var scrollTop = $(window).scrollTop();
+      //if(scrollTop != 0)
+        $('#nav').stop().animate({'opacity':'0.6'},400);
+      //else  
+        //$('#nav').stop().animate({'opacity':'1'},400);
+    });
+    
+     $(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop != 0)
+        $('#nav').stop().animate({'opacity':'0.6'},400);
+      else
+        $('#nav').stop().animate({'opacity':'1'},400); 
+        
+    });
+    
+    $('#nav').hover(
+      function (e) {
+        //var scrollTop = $(window).scrollTop();
+        //if(scrollTop != 0){
+          $('#nav').stop().animate({'opacity':'1'},400);
+        //}
+      },
+      function (e) {
+        //var scrollTop = $(window).scrollTop();
+        //if(scrollTop != 0){
+          $('#nav').stop().animate({'opacity':'0.6'},400);
+        //}
+      }
+    );
+  });
+  
+
+$('#starclick').on('click', function(event, target) {
+  var liked = '';
+  var hate= '';
+  var preference = '';
+  var limitcal = '';
+    liked = Like.join(',');
+  hate = Hate.join(',');
+  preference += Preference['Meat']+','+Preference['F']+','+Preference['G']+','+Preference['H']+','+Preference['I']+','+Preference['J'];
+  limitcal += CalRange['min']+','+CalRange['max'];
+  
+  $('input[name = "liked"]').attr('value',liked);
+  $('input[name = "hate"]').attr('value',hate);
+  $('input[name = "preference"]').attr('value',preference);
+  $('input[name = "limitcal"]').attr('value',limitcal);
+  //$.post( "../results/", {'liked': liked,  'hate': hate, 'preference': preference });
+});

@@ -24,25 +24,26 @@ body {
 
 table{
 	width: 30%;
-	height: 60%; 
+	height: 40%; 
 	position: fixed;
-    top: 7em;
-    right: 7em; 
+    top: 6em;
+    right: 20em; 
+    float: left;
+    z-index: 999; 
 }
 .droptrue{
 	 
 	 height: 150px; 
-	   background: -webkit-linear-gradient(left top, #FFFF66 , #FFCC00); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #FFFF66 , #FFCC00); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #FFFF66 , #FFCC00); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #FFFF66 , #FFCC00); /* Standard syntax */
+	   background: -webkit-linear-gradient(left top, #f9e8a2 , #FFCC00); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f9e8a2 , #FFCC00); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f9e8a2 , #FFCC00); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f9e8a2 , #FFCC00); /* Standard syntax */
 	border-radius: 5px;
-	box-shadow: 6px 6px 6px #FFFF66 ,10px 10px 10px #FFCC00; 
+	box-shadow: 6px 6px 6px #f9e8a2 ,10px 10px 10px #FFCC00; 
 }
-
 /*選擇食材*/
 .tagBox{	
-	width:45%;
+	width:40%;
 	float:left;
 	position:relative;  
 	text-align:left;
@@ -56,6 +57,92 @@ table{
 	width:480px;
 }
 
-#opener {-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;box-shadow:inset 0px 1px 0px 0px #ffffff;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);background-color:#ffffff;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #dcdcdc;display:inline-block;cursor:pointer;color:#666666;font-family:Arial;font-size:15px;font-weight:bold;padding:6px 24px;text-decoration:none;text-shadow:0px 1px 0px #ffffff;}.myButton:hover {background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);background-color:#f6f6f6;}.myButton:active {position:relative;top:1px;}
+#opener {-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;box-shadow:inset 0px 1px 0px 0px #ffffff;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);background-color:#ffffff;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #dcdcdc;display:inline-block;cursor:pointer;color:#666666;font-family:Arial;font-size:15px;font-weight:bold;padding:6px 24px;text-decoration:none;text-shadow:0px 1px 0px #ffffff;} #opener:hover {background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);background-color:#f6f6f6;} #opener:active {position:relative;top:1px;}
+.myButton { -moz-box-shadow: 0px 10px 10px 10px #276873; -webkit-box-shadow: 0px 10px 10px 10px #276873; box-shadow: 0px 10px 10px 10px #276873; background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #55b18e), color-stop(1, #6ab89b)); background:-moz-linear-gradient(top, #55b18e 5%, #6ab89b 100%); background:-webkit-linear-gradient(top, #55b18e 5%, #6ab89b 100%); background:-o-linear-gradient(top, #55b18e 5%, #6ab89b 100%); background:-ms-linear-gradient(top, #55b18e 5%, #6ab89b 100%); background:linear-gradient(to bottom, #55b18e 5%, #6ab89b 100%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#55b18e', endColorstr='#6ab89b',GradientType=0); background-color:#55b18e; -moz-border-radius:16px; -webkit-border-radius:16px; border-radius:16px; border:2px solid #599bb3; display:inline-block; cursor:pointer; color:#ffffff; font-weight:bold; padding:32px 32px; text-decoration:none; text-shadow:0px 1px 0px #3d768a; } .myButton:hover { background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6ab89b), color-stop(1, #55b18e)); background:-moz-linear-gradient(top, #6ab89b 5%, #55b18e 100%); background:-webkit-linear-gradient(top, #6ab89b 5%, #55b18e 100%); background:-o-linear-gradient(top, #6ab89b 5%, #55b18e 100%); background:-ms-linear-gradient(top, #6ab89b 5%, #55b18e 100%); background:linear-gradient(to bottom, #6ab89b 5%, #55b18e 100%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ab89b', endColorstr='#55b18e',GradientType=0); background-color:#6ab89b; } .myButton:active { position:relative; top:1px; }
+
+
+
+
+/*  0604新增banner  */
+#nav{
+    height:45px;
+    border-bottom:1px solid #ddd;
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    background:#33495e repeat-x center left;
+  	z-index: 999; 
+
+
+}
+
+
+/*放button的框*/
+#nav ul{
+    height:25px;
+    list-style:none;
+	position:fixed;
+	right:0px;
+	/* margin-right:0px; */
+    /* margin:0px auto 0px auto; */
+    width:300px;   
+}
+
+
+/*buttonm元件設定*/
+#nav ul li{
+    display:inline;
+    float:left;
+    margin:0px 10px ;          /*上面間距、字與字間距*/
+}
+
+
+/*元件的文字設定*/
+#nav a{
+    font-size:12px;           /*字體大小*/
+    font-weight:bold;         /*字體粗細*/
+    float:left;
+    padding: 15px 4px;        /*與方框間距*/
+    color:#999;
+    text-decoration: none;
+    border:1px solid #ccc;
+    cursor: pointer;
+    /* background:transparent url(../images/rice.jpg) repeat-x center left; */
+    height:16px;              /*框線*/
+    line-height:6px;         /*脫離框框*/
+}
+
+
+/*特效*/
+ #nav a:hover{
+    background:#D9D9DA none;
+    color: #fff;
+} 
+
+/*上下按鈕span設定*/
+#nav a.top span, #nav a.bottom span{
+    float:left;
+    width:20px;
+    height:16px;
+}
+
+
+/*上下索引指定處*/
+#top{
+			top:0px;
+			left:0px;
+			position:absolute;
+			width:100%;
+			height:10px;
+		}
+#bottom{
+			top:1500px;
+			left:0px;
+			position:absolute;
+			width:100%;
+			height:90px;
+			background:transparent url(end.png) no-repeat center center;
+		}
 
 

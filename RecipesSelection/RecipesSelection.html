@@ -17,6 +17,41 @@ function plotConceptMap()
 		var plot = new ConceptMap("graph", "graph-info", dataJson);
 	});
 }
+
+	$(function() {
+		$(window).load(function(){
+			//$('#nav').stop().animate({'opacity':'0.2'},400);
+			var scrollTop = $(window).scrollTop();
+			//if(scrollTop != 0)
+				$('#nav').stop().animate({'opacity':'0.6'},400);
+			//else	
+				//$('#nav').stop().animate({'opacity':'1'},400);
+		});
+		
+		 $(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+			if(scrollTop != 0)
+				$('#nav').stop().animate({'opacity':'0.6'},400);
+			else
+				$('#nav').stop().animate({'opacity':'1'},400); 
+				
+		});
+		
+		$('#nav').hover(
+			function (e) {
+				//var scrollTop = $(window).scrollTop();
+				//if(scrollTop != 0){
+					$('#nav').stop().animate({'opacity':'1'},400);
+				//}
+			},
+			function (e) {
+				//var scrollTop = $(window).scrollTop();
+				//if(scrollTop != 0){
+					$('#nav').stop().animate({'opacity':'0.6'},400);
+				//}
+			}
+		);
+	});
 </script>
 <style>
 body{
@@ -24,9 +59,24 @@ padding-top: 1px;
 }
 </style>
 </head>
+<div id="top"></div>
+	<div id="nav">
+		<ul>
+			<li><a  type="button"; class="top" href="#top" >Top</a></li>
+			<li><a  type="button"; class="bottom" href="#bottom">Bottom</a></li>                
+			<li><a  type="button"; href='../selection/'>上一頁</a></li>
+			<li><a  type="button"; href='../'>首頁</a></li>
+		</ul>
+	</div>   
 <body background="bg.jpg">
 		<h1 align="center">吃什麼好捏...? </h1>
 				<div align="center" id="graph" class="conceptmap" ></div>
 				<div id="graph-info"></div>
+				<div id="bottom" style="width:auto; height:10px; border-color:black;"></div>
 </body>
+
+
+
+
+
 </html>
