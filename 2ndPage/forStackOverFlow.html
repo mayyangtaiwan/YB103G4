@@ -101,41 +101,41 @@ table{
 
 
 <script>
-Like = [];
-Hate = [];
+  Like = [];
+  Hate = [];
 
-$(function() {
-  $( "#AllTable .test" ).draggable({
-    appendTo: "body",
-    helper: "clone",
-        revert: "invalid",
-    });
+  $(function() {
+    $( "#AllTable .test" ).draggable({
+      appendTo: "body",
+      helper: "clone",
+          revert: "invalid",
+      });
 
-  $( ".LikeBox div" ).droppable({
-    drop: function( event, ui ) {
-      var $item = ui.draggable;
-      $item.appendTo("#likeTable");
-          var ingre = $item.text();
-          
-          alert(ingre);
-          Like.push(ingre) ;
-          Like = $.unique(Like)
-    } 
-    }); 
+    $( ".LikeBox div" ).droppable({
+      drop: function( event, ui ) {
+        var $item = ui.draggable;
+        $item.appendTo("#likeTable");
+            var ingre = $item.text();
+            
+            alert(ingre);
+            Like.push(ingre) ;
+            Like = $.unique(Like)
+      } 
+      }); 
 
-    $( ".HateBox div" ).droppable({
-    drop: function( event, ui ) {
-      var $item = ui.draggable;
-      $item.appendTo("#hateTable");
+      $( ".HateBox div" ).droppable({
+      drop: function( event, ui ) {
+        var $item = ui.draggable;
+        $item.appendTo("#hateTable");
 
-          var ingre = $item.text();
-          Hate.push(ingre);
-          Hate = $.unique(Hate)
-    } 
-    }); 
-    
-    $(function() {
-  $('.IngreMainCat').accordion();
-});
-});
+            var ingre = $item.text();
+            Hate.push(ingre);
+            Hate = $.unique(Hate)
+      } 
+      }); 
+      
+      $(function() {
+    $('.IngreMainCat').accordion();
+  });
+  });
 </script>

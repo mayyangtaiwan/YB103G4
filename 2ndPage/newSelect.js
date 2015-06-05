@@ -12,7 +12,30 @@ Hate = [];
       appendTo: "body",
       helper: "clone",
       revert: "invalid",
+      
     });
+
+
+    $( ".tagBox #AllTable" ).droppable({
+      drop: function( event, ui ) {
+        var $item = ui.draggable;
+        $item.appendTo("#AllTable");
+        var ingre = $item.text();
+        Like.pop(ingre);
+        if($.inArray(ingre,Hate) > -1){
+          var index = Hate.indexOf(ingre);
+          if (index > -1) {
+            Hate.splice(index, 1);
+          }
+        }
+                if($.inArray(ingre,Like) > -1){
+          var index = Like.indexOf(ingre);
+          if (index > -1) {
+            Like.splice(index, 1);
+          }
+        }
+      } 
+    }); 
 
     $( ".LikeBox .droptrue" ).droppable({
       drop: function( event, ui ) {
@@ -44,7 +67,15 @@ Hate = [];
       } 
     });
   });  
-
+// $(function() {
+// $("#likeTable > div").click(function(){alert("123")});
+// });
+//     $( "#likeTable > div" ).click(function( event ) {
+//       var $item = $( this ),
+//         $target = $( event.target );
+//         alert( $item );
+//             return false;
+//     });
 
 Perference = { "Meat": 0, "F": 0, "G": 0, "H": 0, "I": 0, "J":0}
 
@@ -193,7 +224,7 @@ Perference = { "Meat": 0, "F": 0, "G": 0, "H": 0, "I": 0, "J":0}
   
 
 
-CalRange = {"min":0,"max":1000 }
+CalRange = {"min":75,"max":800 }
 
   $(function() {
     $( "#slider-range" ).slider({
