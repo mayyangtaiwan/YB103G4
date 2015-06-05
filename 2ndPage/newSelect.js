@@ -261,20 +261,20 @@ CalRange = {"min":75,"max":800 }
 
   $(function() {
     $(window).load(function(){
-      //$('#nav').stop().animate({'opacity':'0.2'},400);
+      //$('#nav').stop().animate({'opacity':'0.3'},400);
       var scrollTop = $(window).scrollTop();
       //if(scrollTop != 0)
-        $('#nav').stop().animate({'opacity':'0.6'},400);
+        $('#nav').stop().animate({'opacity':'0.3'},400);
       //else  
-        //$('#nav').stop().animate({'opacity':'1'},400);
+        //$('#nav').stop().animate({'opacity':'0.9'},400);
     });
     
      $(window).scroll(function(){
       var scrollTop = $(window).scrollTop();
       if(scrollTop != 0)
-        $('#nav').stop().animate({'opacity':'0.6'},400);
+        $('#nav').stop().animate({'opacity':'0.3'},400);
       else
-        $('#nav').stop().animate({'opacity':'1'},400); 
+        $('#nav').stop().animate({'opacity':'0.9'},400); 
         
     });
     
@@ -282,13 +282,13 @@ CalRange = {"min":75,"max":800 }
       function (e) {
         //var scrollTop = $(window).scrollTop();
         //if(scrollTop != 0){
-          $('#nav').stop().animate({'opacity':'1'},400);
+          $('#nav').stop().animate({'opacity':'0.9'},400);
         //}
       },
       function (e) {
         //var scrollTop = $(window).scrollTop();
         //if(scrollTop != 0){
-          $('#nav').stop().animate({'opacity':'0.6'},400);
+          $('#nav').stop().animate({'opacity':'0.3'},400);
         //}
       }
     );
