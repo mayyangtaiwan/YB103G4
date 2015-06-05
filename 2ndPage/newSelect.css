@@ -29,7 +29,6 @@ table{
     top: 6em;
     right: 20em; 
     float: left;
-    z-index: 999; 
 }
 .droptrue{
 	 
@@ -51,6 +50,7 @@ table{
 	font-family:"Hannotate TC";
 	line-height:20px;     /*文字行距*/
 	letter-spacing:2px;   /*文字間距*/
+	z-index: -1;
 }
 
 #AllTable{
@@ -72,7 +72,6 @@ table{
     left:0px;
     right:0px;
     background:#33495e repeat-x center left;
-  	z-index: 999; 
 
 
 }
